@@ -1,12 +1,14 @@
 ---
 title: "Reproducible Research: Peer Assessment 1"
-output: html_document: keep_md: true
+output: 
+html_document: 
+keep_md: true
 ---
 
 
 ## Loading and preprocessing the data
 
-```{r setup}
+```{r}
 unzip("./activity.zip")
 datos_actividad <- read.csv("./activity.csv")
 summary(datos_actividad)
@@ -18,7 +20,7 @@ str(datos_actividad)
 ## What is mean total number of steps taken per day?
 
 ##1. Calculate the total number of steps taken per day
-```{r cars}
+```{r}
 pasos_por_dia <- aggregate(steps ~ date, datos_actividad, sum, na.rm=TRUE)
 pasos_por_dia
 ```
